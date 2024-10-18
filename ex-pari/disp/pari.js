@@ -8,3 +8,19 @@
 // Dichiariamo chi ha vinto.
 
 // ! ELABORAZIONE //
+
+// Funzione per generare un numero casuale da 1 a 5
+
+// Funzione per determinare se un numero è pari o dispari
+
+// Chiediamo all'utente di scegliere pari o dispari e di inserire un numero
+
+// Verifichiamo se il numero è valido
+
+// Generiamo il numero casuale per il computer
+
+// Sommiamo i due numeri
+
+// Determiniamo se la somma è pari o dispari
+
+// Dichiarare chi ha vinto

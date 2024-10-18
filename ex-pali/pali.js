@@ -18,3 +18,12 @@ if (userInput) {
     console.log(`${userInput} non è palindroma.`);
   }
 }
+
+// Funzione per verificare se una parola è palindroma
+function isPalindrome(word) {
+  // Rimuoviamo gli spazi e rendiamo tutto minuscolo
+  const cleanedWord = word.replace(/\s+/g, "").toLowerCase();
+  // Confrontiamo la parola con la sua inversione
+  const reversedWord = cleanedWord.split("").reverse().join("");
+  return cleanedWord === reversedWord;
+}
