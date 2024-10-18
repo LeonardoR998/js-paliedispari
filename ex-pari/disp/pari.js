@@ -24,11 +24,32 @@ const userChoice = prompt("Scegli 'pari' o 'dispari':").toLowerCase();
 const userNumber = parseInt(prompt("Inserisci un numero da 1 a 5:"), 10);
 
 // Verifichiamo se il numero è valido
+// SE il numero è minore o maggiore dello userNumber
+if (userNumber < 1 || userNumber > 5 || isNaN(userNumber)) {
+  // - stampo il messaggio (Numero non valido. Devi inserire un numero da 1 a 5.)
+  console.log("Numero non valido. Devi inserire un numero da 1 a 5.");
+  // ALTRIMENTI
+} else {
+  // Generiamo il numero casuale per il computer
+  const computerNumber = generateRandomNumber();
+  console.log(`Il numero del computer è: ${computerNumber}`);
 
-// Generiamo il numero casuale per il computer
+  // Sommiamo i due numeri
+  const total = userNumber + computerNumber;
+  // - stampo il risultato
+  console.log(`La somma è: ${total}`);
 
-// Sommiamo i due numeri
+  // Determiniamo se la somma è pari o dispari
+  const sumIsEven = isEven(total);
 
-// Determiniamo se la somma è pari o dispari
+  // Dichiarare chi ha vinto
 
-// Dichiarare chi ha vinto
+  if (
+    (sumIsEven && userChoice === "pari") ||
+    (!sumIsEven && userChoice === "dispari")
+  ) {
+    console.log("Hai vinto!");
+  } else {
+    console.log("Hai perso!");
+  }
+}
